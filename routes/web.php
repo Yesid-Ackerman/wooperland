@@ -21,3 +21,10 @@ Route::get('avatars/avatar',[AvatarController::class,'create']);
 Route::post('/Store', [AvatarController::class,'Store'])->name('avatar.Store');
 Route::get('avatar/{avatar}',[AvatarController::class,'show'])->name('avatar.show');
 Route::delete('avatar/{avatar}',[AvatarController::class,'destroy'])->name('avatar.destroy');
+
+//AYUDAS
+Route::get('ayudas/listar',[HelpController::class,'index'])->name('help.index');
+Route::get('ayudas/help',[HelpController::class,'create']);
+Route::post('/Store', [HelpController::class,'Store'])->name('help.Store');
+Route::get('help/{help}',[HelpController::class,'show'])->name('help.show');
+Route::delete('help/{help}',[HelpController::class,'destroy'])->name('help.destroy');
