@@ -28,3 +28,10 @@ Route::get('ayudas/help',[HelpController::class,'create']);
 Route::post('/Store', [HelpController::class,'Store'])->name('help.Store');
 Route::get('help/{help}',[HelpController::class,'show'])->name('help.show');
 Route::delete('help/{help}',[HelpController::class,'destroy'])->name('help.destroy');
+
+//CANJES
+Route::get('canjes/listar',[ExchangeController::class,'index'])->name('exchange.index');
+Route::get('canjes/exchange',[ExchangeController::class,'create']);
+Route::post('/Store', [ExchangeController::class,'Store'])->name('exchange.Store');
+Route::get('exchange/{exchange}',[ExchangeController::class,'show'])->name('exchange.show');
+Route::delete('exchange/{exchange}',[ExchangeController::class,'destroy'])->name('exchange.destroy');
