@@ -35,3 +35,31 @@ Route::get('canjes/exchange',[ExchangeController::class,'create']);
 Route::post('/Store', [ExchangeController::class,'Store'])->name('exchange.Store');
 Route::get('exchange/{exchange}',[ExchangeController::class,'show'])->name('exchange.show');
 Route::delete('exchange/{exchange}',[ExchangeController::class,'destroy'])->name('exchange.destroy');
+
+//RUTAS FORMULARIO RETOS
+route::get('challenges/createchallenge',[RetosController::class,'createchallenge']);
+route::get('challenges/listchallenge',[RetosController::class,'listchallenge'])->name('list.challenge');
+route::post('challenges/readchallenge',[RetosController::class,'readchallenge'])->name('read.challenge');
+Route::get('challenges/{challenges}',[RetosController::class,'showchallenge'])->name('show.challenge');
+Route::delete('challenges/{challenges}',[RetosController::class,'destroychallenge'])->name('destroy.challenge');
+
+//RUTAS FORMULARIO SUGERENCIAS
+route::get('suggestions/createsuggestion',[SugerenciasController::class,'createsuggestion']);
+route::get('suggestions/listsuggestion',[SugerenciasController::class,'listsuggestion'])->name('list.suggestion');
+route::post('suggestions/readsuggestion',[SugerenciasController::class,'readsuggestion'])->name('read.suggestion');
+Route::get('suggestions/{suggestions}',[SugerenciasController::class,'showsuggestion'])->name('show.suggestion');
+Route::delete('suggestions/{suggestions}',[SugerenciasController::class,'destroysuggestion'])->name('destroy.suggestion');
+
+//RUTAS FORMULARIO TEMAS
+route::get('topics/createtopic',[TemasController::class,'createtopic']);
+route::get('topics/listtopic',[TemasController::class,'listtopic'])->name('list.Topic');
+route::post('topics/readtopic',[TemasController::class,'readtopic'])->name('read.topic');
+Route::get('topics/{topics}',[TemasController::class,'showtopic'])->name('show.topic');
+Route::delete('topics/{topics}',[TemasController::class,'destroytopic'])->name('destroy.topic');
+
+//RUTAS FORMULARIO TIEMPOS
+route::get('periods/createperiod',[TiemposController::class,'createperiod']);
+route::get('periods/listperiod',[TiemposController::class,'listperiod'])->name('list.period');
+route::post('periods/readperiod',[TiemposController::class,'readperiod'])->name('read.period');
+Route::get('periods/{periods}',[TiemposController::class,'showperiod'])->name('show.period');
+Route::delete('periods/{periods}',[TiemposController::class,'destroyperiod'])->name('destroy.period');
