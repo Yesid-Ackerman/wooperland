@@ -11,97 +11,82 @@
     <div class="container">
         <h1>ARTICULOS</h1>
 
-        <form action="{{route('article.store')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route ('article.store')}} " method="post" enctype="multipart/form-data">
             @csrf
             <label>
-                Nombre del Articulo:
-                <br>
-                <input type="text" name="nombre_articulo">
+                <input type="text" name="nombre_articulo" placeholder="Nombre del Articulo">
             </label>
-            <br>
             <label>
-                Tipo de Articulo:
-                <br>
-                <input type="text" name="tipo_articulo">
+                <input type="text" name="tipo_articulo" placeholder="Tipo de Articulo">
             </label>
-            <br>
             <label>
-                Costo del Articulo:
-                <br>
-                <input type="number" name="costo">
+                <input type="number" name="costo" placeholder="Costo del Articulo">
             </label>
-            <br>
             <label>
-                Descripcion del Articulo:
-                <br>
-                <input type="text" name="desc_art">
+                <input type="text" name="desc_art" placeholder="Descripcion del Articulo">
             </label>
-            <br>
-            <br>
             <button type="submit">Enviar Formulario</button>
         </form>
     </div>
 </body>
-</html>
 
 <style>
-    /* Estilos generales */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
 
-    /* Estilos para el contenedor principal */
-    .container {
-        max-width: 400px;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #FFD166;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-    /* Estilos para el título */
-    h1 {
-        text-align: center;
-        color: #333;
-    }
+.container {
+    max-width: 500px; /* Aumenté el ancho máximo del formulario */
+    width: 90%; /* Hice el formulario más ancho */
+    padding: 40px; /* Aumenté el espacio interno */
+    background-color: #EF476F;
+    border-radius: 15px; /* Aumenté el radio del borde */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Aumenté la intensidad de la sombra */
+}
 
-    /* Estilos para los labels */
-    label {
-        display: block;
-        margin-bottom: 10px;
-    }
+h1 {
+    color: #333;
+}
 
-    /* Estilos para los inputs */
-    input[type="text"],
-    input[type="number"] {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
+label {
+    display: block;
+    margin-bottom: 20px; /* Aumenté el espacio entre etiquetas */
+}
 
-    /* Estilos para el botón */
-    button[type="submit"] {
-        background-color: #4caf50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        float: right;
-    }
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 22px); /* Resté 22px para compensar el padding y el borde */
+    padding: 15px; /* Aumenté el padding */
+    margin: 10px 0; /* Aumenté el espacio vertical */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Aumenté el radio del borde */
+    box-sizing: border-box;
+}
 
-    button[type="submit"]:hover {
-        background-color: #45a049;
-    }
+button[type="submit"] {
+    margin-top: 20px; /* Aumenté el espacio arriba del botón */
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 30px; /* Aumenté el padding */
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
 </style>
+
+</html>

@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>¡Hola desde el detalle!</h1>
+        <h1>DETALLES DEL ARTICULO</h1>
         <div>
             <p>Detalles del artículo:</p>
             <p>ID: {{$article->id}}</p>
@@ -27,7 +27,7 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f4;
+        background-color: #FFD166;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -38,7 +38,7 @@
     .container {
         max-width: 800px;
         padding: 20px;
-        background-color: #fff;
+        background-color: #EF476F;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
