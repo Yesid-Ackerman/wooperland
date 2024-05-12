@@ -11,14 +11,14 @@ Route::get('/', function () {
 //Articulos
 Route::get('articulos/listar',[ArticleController::class,'index'])->name('article.index');
 Route::get('articulos/article',[ArticleController::class,'create']);
-Route::post('/Store', [ArticleController::class,'Store'])->name('article.Store');
+Route::post('/store', [ArticleController::class,'store'])->name('article.store');
 Route::get('article/{article}',[ArticleController::class,'show'])->name('article.show');
 Route::delete('article/{article}',[ArticleController::class,'destroy'])->name('article.destroy');
 
 //Avatars
 Route::get('avatars/listar',[AvatarController::class,'index'])->name('avatar.index');
 Route::get('avatars/avatar',[AvatarController::class,'create']);
-Route::post('/Store', [AvatarController::class,'Store'])->name('avatar.Store');
+Route::post('/store', [AvatarController::class,'store'])->name('avatar.store');
 Route::get('avatar/{avatar}',[AvatarController::class,'show'])->name('avatar.show');
 Route::delete('avatar/{avatar}',[AvatarController::class,'destroy'])->name('avatar.destroy');
 
@@ -32,6 +32,6 @@ Route::delete('help/{help}',[HelpController::class,'destroy'])->name('help.destr
 //CANJES
 Route::get('canjes/listar',[ExchangeController::class,'index'])->name('exchange.index');
 Route::get('canjes/exchange',[ExchangeController::class,'create']);
-Route::post('/Store', [ExchangeController::class,'Store'])->name('exchange.Store');
+Route::post('/store', [ExchangeController::class,'store'])->name('exchange.store');
 Route::get('exchange/{exchange}',[ExchangeController::class,'show'])->name('exchange.show');
 Route::delete('exchange/{exchange}',[ExchangeController::class,'destroy'])->name('exchange.destroy');
