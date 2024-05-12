@@ -8,24 +8,24 @@
     <style>
         /* Estilos generales */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #FFD166;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 
-        /* Estilos para el contenedor principal */
-        .container {
-            max-width: 400px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    /* Estilos para el contenedor principal */
+    .container {
+        max-width: 800px;
+        padding: 20px;
+        background-color: #EF476F;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
         /* Estilos para el título */
         h1 {
@@ -41,7 +41,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Detalles del Intercambio</h1>
+        <h1>DETALLES DE INTERCAMBIO</h1>
         <div>
             <p>ID: {{$exchange->id}}</p>
             <p>Descripción de Canje: {{$exchange->desc_can}}</p>
