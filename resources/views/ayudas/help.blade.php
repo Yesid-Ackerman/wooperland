@@ -1,33 +1,76 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Formulario de Ayuda</title>
 </head>
 <body>
+    <div class="container">
+        <h1>AYUDAS</h1>
 
-<h1>AVATARS</h1>
-
-<form action="{{route('help.Store')}}" method="POST" enctype="multipart/form-data">
-
-@csrf
-
-<label>
-    Descripcion de Ayuda:
-    <br>
-    <input type="text" name="desc_ayu">
-</label>
-<br>
-<label>
-    Nivel:
-    <br>
-    <input type="int" name="niveles_id_nivel">
-</label>
-<br>
-<br>
-<button type="submit">Enviar Formulario</button>
-</form>
+        <form action="{{route('help.store')}}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <input type="text" name="desc_ayu" placeholder="Descripción de Ayuda">
+            <input type="number" name="niveles_id_nivel" placeholder="Nivel">
+            <button type="submit">Enviar Formulario</button>
+        </form>
+    </div>
 </body>
-</html>
+<style>
+    /* Estilos generales */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffd166;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 
+    /* Estilos para el contenedor principal */
+    .container {
+        max-width: 500px; /* Aumenté el ancho máximo del formulario */
+        width: 90%; /* Hice el formulario más ancho */
+        padding: 40px; /* Aumenté el espacio interno */
+        background-color: #ef4;
+        border-radius: 15px; /* Aumenté el radio del borde */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Aumenté la intensidad de la sombra */
+        text-align: center; /* Centra el contenido del contenedor */
+    }
+
+    /* Estilos para el título */
+    h1 {
+        color: #333;
+    }
+
+    /* Estilos para los inputs */
+    input[type="text"],
+    input[type="number"] {
+        width: calc(100% - 22px); /* Resté 22px para compensar el padding y el borde */
+        padding: 15px; /* Aumenté el padding */
+        margin: 10px 0; /* Aumenté el espacio vertical */
+        border: 1px solid #ccc;
+        border-radius: 10px; /* Aumenté el radio del borde */
+        box-sizing: border-box;
+    }
+
+    /* Estilos para el botón */
+    button[type="submit"] {
+        margin-top: 20px; /* Aumenté el espacio arriba del botón */
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 30px; /* Aumenté el padding */
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</html>

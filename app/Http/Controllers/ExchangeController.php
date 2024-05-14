@@ -12,7 +12,7 @@ class ExchangeController extends Controller
 
     }
 
-    public function Store(Request $request){
+    public function store(Request $request){
         $exchange = new exchange ();
         $exchange->desc_can=$request->desc_can;
         $exchange->ava_avatar=$request->ava_avatar;

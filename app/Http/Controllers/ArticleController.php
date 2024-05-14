@@ -12,7 +12,7 @@ class ArticleController extends Controller
 
     }
 
-    public function Store(Request $request){
+    public function store(Request $request){
         $article = new article();
         $article->nombre_articulo=$request->nombre_articulo;
         $article->tipo_articulo=$request->tipo_articulo;

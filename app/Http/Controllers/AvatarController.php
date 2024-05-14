@@ -13,7 +13,7 @@ class AvatarController extends Controller
 
     }
 
-    public function Store(Request $request){
+    public function store(Request $request){
         $avatar = new avatar();
         $avatar->nombre_avatar=$request->nombre_avatar;
         $avatar->niños_id_niño=$request->niños_id_niño;
