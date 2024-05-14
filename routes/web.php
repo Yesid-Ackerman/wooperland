@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\AvatarController;
+use App\Http\Controllers\HelpController;
+use App\Http\Controllers\ExchangeController;
 use App\Http\Controllers\KidController;
-use App\Models\Father;
+use App\Http\Controllers\FatherController;
+use App\Http\Controllers\KidTopicsController;
+use App\Http\Controllers\FatherTopicController;
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
