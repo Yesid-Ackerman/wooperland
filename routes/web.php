@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\KidController;
+use App\Models\Father;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -35,3 +37,31 @@ Route::get('canjes/exchange',[ExchangeController::class,'create']);
 Route::post('/Store', [ExchangeController::class,'Store'])->name('exchange.Store');
 Route::get('exchange/{exchange}',[ExchangeController::class,'show'])->name('exchange.show');
 Route::delete('exchange/{exchange}',[ExchangeController::class,'destroy'])->name('exchange.destroy');
+
+//NIÑOS
+Route::get('niños/listar',[KidController::class,'index'])->name('niños.index');
+Route::get('niños/create', [KidController::class, 'create']);
+Route::post('/niños/store', [KidController::class, 'store'])->name('niños.store');
+Route::get('niño/{niño}',[KidController::class,'show'])->name('kid.show');
+Route::delete('niño/{niño}',[KidController::class,'destroy'])->name('niño.destroy');
+
+//PADRES
+Route::get('padres/listar',[FatherController::class,'index'])->name('padres.index');
+Route::get('padres/create', [FatherController::class, 'create']);
+Route::post('padres/store', [FatherController::class, 'store'])->name('padres.store');
+Route::get('padres/{padre}',[FatherController::class,'show'])->name('padres.show');
+Route::delete('pardres/{padre}',[FatherController::class,'destroy'])->name('padres.destroy');
+
+//niñotema
+Route::get('niñotema/listar',[KidTopicsController::class,'index'])->name('niñotema.index');
+Route::get('niñotema/create',[KidTopicsController::class,'create']);
+Route::post('niñotema/store', [KidTopicsController::class, 'store'])->name('niñotema.store');
+Route::get('niñotema/{niñotema}',[KidTopicsController::class,'show'])->name('niñotema.show');
+Route::delete('niñotema/{niñotema}',[KidTopicsController::class,'destroy'])->name('niñotema.destroy');
+
+//padretema
+Route::get('padretema/listar',[FatherTopicController::class,'index'])->name('padretema.index');
+Route::get('padretema/create',[FatherTopicController::class,'create']);
+Route::post('padretema/store', [FatherTopicController::class, 'store'])->name('padretema.store');
+Route::get('padretema/{padretema}',[FatherTopicController::class,'show'])->name('padretema.show');
+Route::delete('padretema/{padretema}',[FatherTopicController::class,'destroy'])->name('padretema.destroy');
