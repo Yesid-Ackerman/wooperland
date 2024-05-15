@@ -32,11 +32,11 @@ class FatherTopicController extends Controller
         
     }
 
-    public function show($id)
+    public function show(FatherTopic $fatherTopic)
     {
-        $fatherTopics=FatherTopic::find($id);
-        $fatherTopics;
-        //return view('padretema.show', compact('fatherTopic')); 
+        //$fatherTopics=FatherTopic::find($id);
+        //$fatherTopics;
+        return view('padretema.show', compact('fatherTopic')); 
     }
 
     public function destroy($id)

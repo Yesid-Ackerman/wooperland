@@ -29,11 +29,11 @@ class KidTopicsController extends Controller
     }
 
     
-    public function show($id)
+    public function show(KidTopics $kidTopicss)
     {
-        $kidTopicss=KidTopics::find($id);
-        $kidTopicss;
-        //return view('niñotema.show', compact('kidTopics')); 
+        //$kidTopicss=KidTopics::find($id);
+        //$kidTopicss;
+        return view('niñotema.show', compact('kidTopicss')); 
     }
 
    

@@ -8,5 +8,5 @@
 <body>
     <h1>Mostrar niñotema</h1>
 
-<p>ID: {{ $kidTopics }}</p>
+<p>ID: {{ $kidTopicss }}</p>
 </html>

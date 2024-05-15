@@ -32,11 +32,11 @@ class FatherController extends Controller
         return view('padres.listar', compact('fathers'));
     }
 
-    public function show($id)
+    public function show(Father $father)
     {
-        $fathers=Father::find($id);
-        $fathers;
-        //return view('padres.show', compact('father'));
+        //$fathers=Father::find($id);
+        //$fathers;
+        return view('padres.show', compact('father'));
     }
 
     public function destroy($id)

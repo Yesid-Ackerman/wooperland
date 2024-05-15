@@ -7,66 +7,66 @@
     <title>Document</title>
     <style>
         body {
-            font-family: 'Happy Monkey', cursive; /* Tipo de letra */
-            background-color: #FFD166; /* Fondo amarillo */
+            font-family: 'Happy Monkey', cursive; 
+            background-color: #FFD166; 
         }
 
         h1 {
-            color: #333; /* Color del título */
+            color: #333; 
         }
 
         table {
-            width: 100%; /* Ancho total de la tabla */
-            border-collapse: collapse; /* Colapso de bordes de tabla */
-            margin-bottom: 20px; /* Espacio inferior */
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-bottom: 20px; 
         }
 
         th, td {
-            padding: 10px; /* Espacio interno */
-            text-align: left; /* Alineación de texto izquierda */
-            border-bottom: 2px solid #fff; /* Borde inferior */
+            padding: 10px; 
+            text-align: left; 
+            border-bottom: 2px solid #fff; 
         }
 
         th {
-            background-color: #333; /* Color de fondo del encabezado */
-            color: #fff; /* Color del texto del encabezado */
+            background-color: #333; 
+            color: #fff; 
         }
 
         tr:nth-child(even) {
-            background-color: #f2f2f2; /* Fondo alternado para filas pares */
+            background-color: #f2f2f2; 
         }
 
         a.button {
-            display: inline-block; /* Mostrar como bloque en línea */
-            padding: 8px 16px; /* Espacio interno */
-            text-decoration: none; /* Quitar subrayado */
-            color: #fff; /* Color del texto */
-            background-color: #EF476F; /* Color de fondo del botón */
-            border-radius: 20px; /* Borde redondeado */
-            transition: background-color 0.3s; /* Transición al pasar el ratón */
+            display: inline-block; 
+            padding: 8px 16px; 
+            text-decoration: none;
+            color: #fff;
+            background-color: #EF476F; 
+            border-radius: 20px; 
+            transition: background-color 0.3s; 
         }
 
         a.button:hover {
-            background-color: #d73858; /* Color de fondo del botón al pasar el ratón */
+            background-color: #d73858; 
         }
 
         form {
-            display: inline; /* Mostrar el formulario en línea */
-            margin: 0; /* Eliminar márgenes */
+            display: inline; 
+            margin: 0; 
         }
 
         button[type="submit"] {
-            padding: 8px 16px; /* Espacio interno */
-            border: none; /* Quitar borde */
-            border-radius: 20px; /* Borde redondeado */
-            background-color: #EF476F; /* Color de fondo del botón */
-            color: #fff; /* Color del texto */
-            cursor: pointer; /* Cambiar cursor al pasar el ratón */
-            transition: background-color 0.3s; /* Transición al pasar el ratón */
+            padding: 8px 16px; 
+            border: none; 
+            border-radius: 20px; 
+            background-color: #EF476F; 
+            color: #fff; 
+            cursor: pointer; 
+            transition: background-color 0.3s; 
         }
 
         button[type="submit"]:hover {
-            background-color: #d73858; /* Color de fondo del botón al pasar el ratón */
+            background-color: #d73858; 
         }
     </style>
 </head>
@@ -94,8 +94,8 @@
                     <td>{{ $kid->edad }}</td>
                     <td>{{ $kid->nickname }}</td>
                     <td>
-                        <a href="{{ route('kid.show', $kid->id) }}" class="button">Mostrar</a>
-                        <form action="{{ route('niño.destroy', $kid->id) }}" method="POST">
+                        <a href="{{ route('niños.show', $kid->id) }}" class="button">Mostrar</a>
+                        <form action="{{ route('niños.destroy', $kid->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit">Eliminar</button>

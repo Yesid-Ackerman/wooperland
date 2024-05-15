@@ -33,10 +33,10 @@ class KidController extends Controller
     }
     
     
-    public function show($id){
-        $kids=Kid::find($id);
-        $kids;
-        //return view('niños.show');
+    public function show(Kid $kid){
+        //$kids=Kid::find($id);
+        //$kids;
+        return view('niños.show', compact('kid'));
     }
     
     public function destroy($id) 
