@@ -36,4 +36,21 @@ class ArticleController extends Controller
         $article->delete();
         return redirect()->route('article.index');
     }
+    
+    public function edit(Article $article)
+    {
+        return view('articulos.editar', compact('article'));
+    }
+
+    public function update(Request $request, Article $article)
+    {
+        $article->nombre_articulo = $request->nombre_articulo;
+        $article->tipo_articulo = $request->tipo_articulo;
+        $article->costo = $request->costo;
+        $article->desc_art = $request->desc_art;
+        $article->save();
+
+        return redirect()->route('article.index');
+    }
+
 }

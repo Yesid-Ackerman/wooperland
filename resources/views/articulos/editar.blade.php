@@ -9,10 +9,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>ARTICULOS</h1>
+        <h1>EDITAR ARTICULO</h1>
 
-        <form action="{{route ('article.store')}} " method="post" enctype="multipart/form-data">
+        <form action="{{ route('article.update', $article->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method("PUT")
             <label>
                 <input type="text" name="nombre_articulo" placeholder="Nombre del Articulo">
             </label>
@@ -25,7 +26,7 @@
             <label>
                 <input type="text" name="desc_art" placeholder="Descripcion del Articulo">
             </label>
-            <button type="submit">Enviar Formulario</button>
+            <button type="submit">Actualizar</button>
         </form>
     </div>
 </body>
@@ -76,7 +77,7 @@ button[type="submit"] {
     margin-top: 20px;
     background-color: #4caf50;
     color: white;
-    padding: 15px 30px; 
+    padding: 15px 30px;
     border: none;
     border-radius: 15px;
     cursor: pointer;

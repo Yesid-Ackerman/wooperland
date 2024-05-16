@@ -21,14 +21,18 @@ Route::get('articulos/listar', [ArticleController::class, 'index'])->name('artic
 Route::get('articulos/article', [ArticleController::class, 'create']);
 Route::post('articulos/store', [ArticleController::class, 'store'])->name('article.store');
 Route::get('articulos/{article}', [ArticleController::class, 'show'])->name('article.show');
+Route::put('article/{article}', [ArticleController::class, 'update'])->name('article.update');
 Route::delete('articulos/{article}', [ArticleController::class, 'destroy'])->name('article.destroy');
+Route::get('article/{article}/editar', [ArticleController::class, 'edit'])->name('article.edit');
 
 // Avatars
 Route::get('avatars/listar', [AvatarController::class, 'index'])->name('avatar.index');
 Route::get('avatars/avatar', [AvatarController::class, 'create']);
 Route::post('avatars/store', [AvatarController::class, 'store'])->name('avatar.store');
 Route::get('avatars/{avatar}', [AvatarController::class, 'show'])->name('avatar.show');
+Route::put('avatar/{avatar}', [AvatarController::class, 'update'])->name('avatar.update');
 Route::delete('avatars/{avatar}', [AvatarController::class, 'destroy'])->name('avatar.destroy');
+Route::get('avatar/{avatar}/editar', [AvatarController::class, 'edit'])->name('avatar.edit');
 
 // Ayudas
 Route::get('ayudas/listar', [HelpController::class, 'index'])->name('help.index');

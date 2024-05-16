@@ -4,35 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/app.css">
-    <title>Document</title>
+    <title>Formulario de Avatares</title>
 </head>
 <body>
     <div class="container">
-        <h1>ARTICULOS</h1>
+        <h1>AVATARS</h1>
 
-        <form action="{{route ('article.store')}} " method="post" enctype="multipart/form-data">
+        <form action="{{ route('avatar.update', $avatar->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <label>
-                <input type="text" name="nombre_articulo" placeholder="Nombre del Articulo">
-            </label>
-            <label>
-                <input type="text" name="tipo_articulo" placeholder="Tipo de Articulo">
-            </label>
-            <label>
-                <input type="number" name="costo" placeholder="Costo del Articulo">
-            </label>
-            <label>
-                <input type="text" name="desc_art" placeholder="Descripcion del Articulo">
-            </label>
-            <button type="submit">Enviar Formulario</button>
+            @method("PUT")
+            <input type="text" name="nombre_avatar" placeholder="Nombre de Avatar">
+            <input type="number" name="niños_id_niño" placeholder="ID">
+            <button type="submit">Actualizar</button>
         </form>
     </div>
 </body>
-
 <style>
-
-body {
+   body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
@@ -51,15 +39,9 @@ body {
     background-color: #EF476F;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
 
 h1 {
     color: #333;
-}
-
-label {
-    display: block;
-    margin-bottom: 20px;
 }
 
 input[type="text"],
@@ -76,7 +58,7 @@ button[type="submit"] {
     margin-top: 20px;
     background-color: #4caf50;
     color: white;
-    padding: 15px 30px; 
+    padding: 15px 30px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -85,8 +67,5 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #45a049;
 }
-
-
 </style>
-
 </html>
