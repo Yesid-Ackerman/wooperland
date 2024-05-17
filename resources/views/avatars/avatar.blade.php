@@ -16,6 +16,11 @@
             <input type="number" name="niños_id_niño" placeholder="ID">
             <button type="submit">Enviar Formulario</button>
         </form>
+
+        <!-- Botón "Ver Registros" -->
+        <form action="{{ route('avatar.index') }}">
+            <button type="submit">Ver Registros</button>
+        </form>
     </div>
 </body>
 <style>
@@ -38,6 +43,10 @@
     background-color: #EF476F;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 h1 {
     color: #333;

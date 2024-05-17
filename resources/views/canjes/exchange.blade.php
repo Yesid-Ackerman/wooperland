@@ -8,14 +8,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>AVATARS</h1>
+        <h1>CANJES</h1>
 
-        <form action="{{route('exchange.store')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('exchange.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <input type="text" name="desc_can" placeholder="Descripción de Canje">
             <input type="text" name="ava_avatar" placeholder="Avatar">
             <input type="text" name="art_article" placeholder="Artículo">
             <button type="submit">Enviar Formulario</button>
+        </form>
+
+        <!-- Botón "Ver Registros" -->
+        <form action="{{ route('exchange.index') }}">
+            <button type="submit">Ver Registros</button>
         </form>
     </div>
 </body>

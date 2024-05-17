@@ -39,14 +39,19 @@ Route::get('ayudas/listar', [HelpController::class, 'index'])->name('help.index'
 Route::get('ayudas/help', [HelpController::class, 'create']);
 Route::post('ayudas/store', [HelpController::class, 'store'])->name('help.store');
 Route::get('ayudas/{help}', [HelpController::class, 'show'])->name('help.show');
+Route::put('ayudas/{help}', [HelpController::class, 'update'])->name('help.update');
 Route::delete('ayudas/{help}', [HelpController::class, 'destroy'])->name('help.destroy');
+Route::get('ayudas/{help}/editar', [HelpController::class, 'edit'])->name('help.edit');
 
-//Canjes
-Route::get('canjes/listar',[ExchangeController::class,'index'])->name('exchange.index');
-Route::get('canjes/exchange',[ExchangeController::class,'create']);
-Route::post('/Store', [ExchangeController::class,'Store'])->name('exchange.Store');
-Route::get('exchange/{exchange}',[ExchangeController::class,'show'])->name('exchange.show');
-Route::delete('exchange/{exchange}',[ExchangeController::class,'destroy'])->name('exchange.destroy');
+
+// Canjes
+Route::get('canjes/listar', [ExchangeController::class, 'index'])->name('exchange.index');
+Route::get('canjes/exchange', [ExchangeController::class, 'create']);
+Route::post('canjes/store', [ExchangeController::class, 'store'])->name('exchange.store');
+Route::get('canjes/{exchange}', [ExchangeController::class, 'show'])->name('exchange.show');
+Route::put('canjes/{exchange}', [ExchangeController::class, 'update'])->name('exchange.update');
+Route::delete('canjes/{exchange}', [ExchangeController::class, 'destroy'])->name('exchange.destroy');
+Route::get('canjes/{exchange}/editar', [ExchangeController::class, 'edit'])->name('exchange.edit');
 
 //RUTAS FORMULARIO RETOS
 Route::get('challenges/createchallenge',[RetosController::class,'createchallenge']);
