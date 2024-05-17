@@ -22,8 +22,7 @@
 </html>
 
 <style>
-    /* Estilos generales */
-    body {
+       body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
@@ -34,7 +33,6 @@
         height: 100vh;
     }
 
-    /* Estilos para el contenedor principal */
     .container {
         max-width: 800px;
         padding: 20px;
@@ -43,13 +41,11 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    /* Estilos para el título */
     h1 {
         text-align: center;
         color: #333;
     }
 
-    /* Estilos para los párrafos */
     p {
         margin-bottom: 10px;
     }

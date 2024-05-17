@@ -10,16 +10,12 @@
     <div class="container">
         <h1>AVATARS</h1>
 
-        <form action="{{ route('avatar.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('avatar.update', $avatar->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method("PUT")
             <input type="text" name="nombre_avatar" placeholder="Nombre de Avatar">
             <input type="number" name="niños_id_niño" placeholder="ID">
-            <button type="submit">Enviar Formulario</button>
-        </form>
-
-        <!-- Botón "Ver Registros" -->
-        <form action="{{ route('avatar.index') }}">
-            <button type="submit">Ver Registros</button>
+            <button type="submit">Actualizar</button>
         </form>
     </div>
 </body>
@@ -43,10 +39,6 @@
     background-color: #EF476F;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 h1 {
     color: #333;

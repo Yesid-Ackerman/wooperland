@@ -1,37 +1,55 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\help;
+
+use App\Models\Help;
 use Illuminate\Http\Request;
 
 class HelpController extends Controller
 {
-    public function create(){
-
+    public function create()
+    {
         return view('ayudas.help');
-
     }
 
-    public function Store(Request $request){
-        $help = new help ();
-        $help->desc_ayu=$request->desc_ayu;
-        $help->niveles_id_nivel=$request->niveles_id_nivel;
+    public function store(Request $request)
+    {
+        $help = new Help();
+        $help->desc_ayu = $request->desc_ayu;
+        $help->niveles_id_nivel = $request->niveles_id_nivel;
         $help->save();
-        return $request;
-     }
 
-    public function index(){
-
-        $helps = help::orderBy('id', 'desc')->get();
-        return view('ayudas/listar', compact('helps'));
+        return redirect()->route('help.index');
     }
-     public Function show (help $help){
 
-        return view('ayudas/show', compact('help'));
-
+    public function index()
+    {
+        $helps = Help::orderBy('id', 'desc')->get();
+        return view('ayudas.listar', compact('helps'));
     }
-    public function destroy(help $help) {
+
+    public function show(Help $help)
+    {
+        return view('ayudas.show', compact('help'));
+    }
+
+    public function destroy(Help $help)
+    {
         $help->delete();
+        return redirect()->route('help.index');
+    }
+
+    public function edit(Help $help)
+    {
+        return view('ayudas.editar', compact('help'));
+    }
+
+    public function update(Request $request, Help $help)
+    {
+        $help->desc_ayu = $request->desc_ayu;
+        $help->niveles_id_nivel = $request->niveles_id_nivel;
+        $help->save();
+
         return redirect()->route('help.index');
     }
 }

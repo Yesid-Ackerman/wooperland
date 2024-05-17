@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Formulario de Ayuda</title>
+    <title>Actualizar canje</title>
 </head>
 <body>
     <div class="container">
-        <h1>AYUDAS</h1>
+        <h1>ACTUALIZAR CANJE</h1>
 
-        <form action="{{route('help.store')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('exchange.update', $exchange->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <input type="text" name="desc_ayu" placeholder="Descripción de Ayuda">
-            <input type="number" name="niveles_id_nivel" placeholder="Nivel">
-            <button type="submit">Enviar Formulario</button>
-        </form>
-
-        <!-- Botón "Ver Registros" -->
-        <form action="{{ route('help.index') }}">
-            <button type="submit">Ver Registros</button>
+            @method('PUT')
+            <input type="text" name="desc_can" placeholder="Descripción de Canje" value="{{ $exchange->desc_can }}">
+            <input type="text" name="ava_avatar" placeholder="Avatar" value="{{ $exchange->ava_avatar }}">
+            <input type="text" name="art_article" placeholder="Artículo" value="{{ $exchange->art_article }}">
+            <button type="submit">Actualizar</button>
         </form>
     </div>
 </body>
@@ -35,7 +32,6 @@
         height: 100vh;
     }
 
-
     .container {
         max-width: 500px;
         width: 90%;
@@ -46,14 +42,11 @@
         text-align: center;
     }
 
-
     h1 {
         color: #333;
     }
 
-
-    input[type="text"],
-    input[type="number"] {
+    input[type="text"] {
         width: calc(100% - 22px);
         padding: 15px;
         margin: 10px 0;
@@ -62,12 +55,11 @@
         box-sizing: border-box;
     }
 
-
     button[type="submit"] {
         margin-top: 20px;
         background-color: #4caf50;
         color: white;
-        padding: 15px 30px;
+        padding: 15px 30px; 
         border: none;
         border-radius: 15px;
         cursor: pointer;

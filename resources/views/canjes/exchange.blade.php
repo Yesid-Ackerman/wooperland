@@ -8,19 +8,24 @@
 </head>
 <body>
     <div class="container">
-        <h1>AVATARS</h1>
+        <h1>CANJES</h1>
 
-        <form action="{{route('exchange.store')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('exchange.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <input type="text" name="desc_can" placeholder="Descripción de Canje">
             <input type="text" name="ava_avatar" placeholder="Avatar">
             <input type="text" name="art_article" placeholder="Artículo">
             <button type="submit">Enviar Formulario</button>
         </form>
+
+        <!-- Botón "Ver Registros" -->
+        <form action="{{ route('exchange.index') }}">
+            <button type="submit">Ver Registros</button>
+        </form>
     </div>
 </body>
 <style>
-    /* Estilos generales */
+
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -32,38 +37,38 @@
         height: 100vh;
     }
 
-    /* Estilos para el contenedor principal */
+
     .container {
-        max-width: 500px; /* Aumenté el ancho máximo del formulario */
-        width: 90%; /* Hice el formulario más ancho */
-        padding: 40px; /* Aumenté el espacio interno */
+        max-width: 500px;
+        width: 90%;
+        padding: 40px;
         background-color: #ef476f;
-        border-radius: 15px; /* Aumenté el radio del borde */
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Aumenté la intensidad de la sombra */
-        text-align: center; /* Centra el contenido del contenedor */
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
     }
 
-    /* Estilos para el título */
+
     h1 {
         color: #333;
     }
 
-    /* Estilos para los inputs */
+
     input[type="text"] {
-        width: calc(100% - 22px); /* Resté 22px para compensar el padding y el borde */
-        padding: 15px; /* Aumenté el padding */
-        margin: 10px 0; /* Aumenté el espacio vertical */
+        width: calc(100% - 22px);
+        padding: 15px;
+        margin: 10px 0;
         border: 1px solid #ccc;
-        border-radius: 10px; /* Aumenté el radio del borde */
+        border-radius: 10px;
         box-sizing: border-box;
     }
 
-    /* Estilos para el botón */
+
     button[type="submit"] {
-        margin-top: 20px; /* Aumenté el espacio arriba del botón */
+        margin-top: 20px;
         background-color: #4caf50;
         color: white;
-        padding: 15px 30px; /* Aumenté el padding */
+        padding: 15px 30px; 
         border: none;
         border-radius: 15px;
         cursor: pointer;

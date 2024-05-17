@@ -5,31 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/app.css">
-    <title>Document</title>
+    <title>Editar Ayuda</title>
 </head>
 <body>
     <div class="container">
-        <h1>ARTICULOS</h1>
+        <h1>EDITAR AYUDA</h1>
 
-        <form action="{{ route('article.store') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('help.update', $help->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method("PUT")
             <label>
-                <input type="text" name="nombre_articulo" placeholder="Nombre del Articulo">
+                <input type="text" name="desc_ayu" value="{{ $help->desc_ayu }}" placeholder="Descripción de la Ayuda">
             </label>
             <label>
-                <input type="text" name="tipo_articulo" placeholder="Tipo de Articulo">
+                <input type="number" name="niveles_id_nivel" value="{{ $help->niveles_id_nivel }}" placeholder="ID del Nivel">
             </label>
-            <label>
-                <input type="number" name="costo" placeholder="Costo del Articulo">
-            </label>
-            <label>
-                <input type="text" name="desc_art" placeholder="Descripcion del Articulo">
-            </label>
-            <button type="submit" class="submit-button">Enviar Formulario</button>
-        </form>
-
-        <form action="{{ route('article.index') }}">
-            <button type="submit" class="view-button">Ver Registros</button>
+            <button type="submit">Actualizar</button>
         </form>
     </div>
 </body>
@@ -76,32 +67,18 @@ input[type="number"] {
     box-sizing: border-box;
 }
 
-.submit-button {
+button[type="submit"] {
     margin-top: 20px;
     background-color: #4caf50;
     color: white;
-    padding: 15px 30px; 
+    padding: 15px 30px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
 }
 
-.submit-button:hover {
+button[type="submit"]:hover {
     background-color: #45a049;
-}
-
-.view-button {
-    margin-top: 20px;
-    background-color: #3498db;
-    color: white;
-    padding: 15px 30px; 
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-.view-button:hover {
-    background-color: #2980b9;
 }
 
 </style>
