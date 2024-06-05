@@ -18,11 +18,11 @@ return new class extends Migration
             $table->double("costo");
             $table->string("desc_art");
             //foranea niño
-            $table->unsignedBigInteger('store_id')->nullable();
+            $table->unsignedBigInteger('market_id')->nullable();
 
             //referencia
-            $table->foreign('store_id')->references('id')->on('store')->onDelete('cascade');
-            
+            $table->foreign('market_id')->references('id')->on('market')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

@@ -11,15 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-<<<<<<<< HEAD:database/migrations/2024_01_01_162025_create_market_table.php
         Schema::create('market', function (Blueprint $table) {
-            $table->id();
-========
-        Schema::create('store', function (Blueprint $table) {
             $table->id();
             $table -> string('name');
             $table -> string('desc');
->>>>>>>> f09df22f98bb1bf089dd90b4bf3f9742ec7e0388:database/migrations/2024_06_05_153145_create_store_table.php
             $table->timestamps();
         });
     }
@@ -29,10 +24,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-<<<<<<<< HEAD:database/migrations/2024_01_01_162025_create_market_table.php
         Schema::dropIfExists('market');
-========
-        Schema::dropIfExists('store');
->>>>>>>> f09df22f98bb1bf089dd90b4bf3f9742ec7e0388:database/migrations/2024_06_05_153145_create_store_table.php
+
     }
 };
