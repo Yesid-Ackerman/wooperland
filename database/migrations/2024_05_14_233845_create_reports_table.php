@@ -15,9 +15,17 @@ return new class extends Migration
             $table->id();
             $table->string('grafico');
             $table->integer('calificacion');
-            $table->string('detalles');
-            $table->string('nivel_mas_jugado');
-            $table->string('padre');
+            $table->string('detallenivelmasjugado');
+            $table->string('listanivelmasjugado');
+
+            $table->unsignedBigInteger('father_id')->nullable();
+            $table->unsignedBigInteger('level_id')->nullable();
+            $table->unsignedBigInteger('kid_topic_id')->nullable();
+
+            $table->foreign('father_id')->references('id')->on('fathers')->onDelete('cascade');
+            $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
+            $table->foreign('kid_topic_id')->references('id')->on('kid_topics')->onDelete('cascade');
+            
             $table->timestamps();
         });
     }

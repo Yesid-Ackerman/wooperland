@@ -17,34 +17,6 @@ Route::put('article/{article}', [ArticleController::class, 'update'])->name('art
 Route::delete('articulos/{article}', [ArticleController::class, 'destroy'])->name('article.destroy');
 Route::get('article/{article}/editar', [ArticleController::class, 'edit'])->name('article.edit');
 
-// Avatars
-Route::get('avatars/listar', [AvatarController::class, 'index'])->name('avatar.index');
-Route::get('avatars/avatar', [AvatarController::class, 'create']);
-Route::post('avatars/store', [AvatarController::class, 'store'])->name('avatar.store');
-Route::get('avatars/{avatar}', [AvatarController::class, 'show'])->name('avatar.show');
-Route::put('avatar/{avatar}', [AvatarController::class, 'update'])->name('avatar.update');
-Route::delete('avatars/{avatar}', [AvatarController::class, 'destroy'])->name('avatar.destroy');
-Route::get('avatar/{avatar}/editar', [AvatarController::class, 'edit'])->name('avatar.edit');
-
-// Ayudas
-Route::get('ayudas/listar', [HelpController::class, 'index'])->name('help.index');
-Route::get('ayudas/help', [HelpController::class, 'create']);
-Route::post('ayudas/store', [HelpController::class, 'store'])->name('help.store');
-Route::get('ayudas/{help}', [HelpController::class, 'show'])->name('help.show');
-Route::put('ayudas/{help}', [HelpController::class, 'update'])->name('help.update');
-Route::delete('ayudas/{help}', [HelpController::class, 'destroy'])->name('help.destroy');
-Route::get('ayudas/{help}/editar', [HelpController::class, 'edit'])->name('help.edit');
-
-
-// Canjes
-Route::get('canjes/listar', [ExchangeController::class, 'index'])->name('exchange.index');
-Route::get('canjes/exchange', [ExchangeController::class, 'create']);
-Route::post('canjes/store', [ExchangeController::class, 'store'])->name('exchange.store');
-Route::get('canjes/{exchange}', [ExchangeController::class, 'show'])->name('exchange.show');
-Route::put('canjes/{exchange}', [ExchangeController::class, 'update'])->name('exchange.update');
-Route::delete('canjes/{exchange}', [ExchangeController::class, 'destroy'])->name('exchange.destroy');
-Route::get('canjes/{exchange}/editar', [ExchangeController::class, 'edit'])->name('exchange.edit');
-
 //RUTAS FORMULARIO RETOS
 Route::get('challenges/createchallenge',[RetosController::class,'createchallenge']);
 Route::get('challenges/listchallenge',[RetosController::class,'listchallenge'])->name('list.challenge');
@@ -65,13 +37,6 @@ Route::get('topics/listtopic',[TemasController::class,'listtopic'])->name('list.
 Route::post('topics/readtopic',[TemasController::class,'readtopic'])->name('read.topic');
 Route::get('topics/{topics}',[TemasController::class,'showtopic'])->name('show.topic');
 Route::delete('topics/{topics}',[TemasController::class,'destroytopic'])->name('destroy.topic');
-
-//RUTAS FORMULARIO TIEMPOS
-Route::get('periods/createperiod',[TiemposController::class,'createperiod']);
-Route::get('periods/listperiod',[TiemposController::class,'listperiod'])->name('list.period');
-Route::post('periods/readperiod',[TiemposController::class,'readperiod'])->name('read.period');
-Route::get('periods/{periods}',[TiemposController::class,'showperiod'])->name('show.period');
-Route::delete('periods/{periods}',[TiemposController::class,'destroyperiod'])->name('destroy.period');
 
 // Niños
 Route::get('niños/listar', [kidController::class, 'index'])->name('niños.index');
@@ -100,13 +65,6 @@ Route::get('niñotema/create', [kidTopicsController::class, 'create']);
 Route::post('niñotema/store', [kidTopicsController::class, 'store'])->name('niñotema.store');
 Route::get('niñotema/{niñotema}', [kidTopicsController::class, 'show'])->name('niñotema.show');
 Route::delete('niñotema/{niñotema}', [kidTopicsController::class, 'destroy'])->name('niñotema.destroy');
-
-// Controles Parentales
-Route::get('controles_parentales/listar', [ParentalControlController::class, 'index'])->name('parental_control.index');
-Route::get('controles_parentales/control_parental', [ParentalControlController::class, 'create']);
-Route::post('controles_parentales/store', [ParentalControlController::class, 'store'])->name('parental.store');
-Route::get('controles_parentales/{parentales}', [ParentalControlController::class, 'show'])->name('control_parental.show');
-Route::delete('controles_parentales/{parentales}', [ParentalControlController::class, 'destroy'])->name('control_parental.destroy');
 
 //informes
 Route::get('informes/listar', [ReportController::class, 'index'])->name('report.index');

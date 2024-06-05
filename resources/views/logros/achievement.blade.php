@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/app.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Informes</h1>

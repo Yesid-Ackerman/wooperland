@@ -14,10 +14,14 @@ return new class extends Migration
         Schema::create('levels', function (Blueprint $table) {
             $table->id();
             $table->String('name');
-            $table->String('description');
-            $table->String('characteristic');
             $table->String('prize');
-            $table->String('issue');
+            $table->String('help');
+            $table->String('description');
+            
+            $table->unsignedBigInteger('tema_id')->nullable();
+
+            $table->foreign('tema_id')->references('id')->on('temas')->onDelete('cascade');
+            
             $table->timestamps();
         });
     }

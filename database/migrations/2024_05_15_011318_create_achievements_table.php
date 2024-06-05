@@ -16,7 +16,12 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('prize');
-            $table->string('level');
+        
+            $table->unsignedBigInteger('tema_id')->nullable();
+
+            $table->foreign('tema_id')->references('id')->on('temas')->onDelete('cascade');
+            
+            
             $table->timestamps();
         });
     }
