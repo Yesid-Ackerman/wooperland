@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sugerencias', function (Blueprint $table) {
+            $table->comment("hola mundo");
             $table->id();
             $table->text('Tema_sugerencia');
             $table->text('Actividad_sugerencia');
