@@ -29,9 +29,7 @@
 </head>
 <body>
     <h1>Mostrar niño</h1>
-    <div class="kid-info">
         {{$kid}}
-    </div>
 </body>
 </html>
 

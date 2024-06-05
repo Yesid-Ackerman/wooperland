@@ -34,8 +34,8 @@ class KidController extends Controller
     
     
     public function show($id){
-        $kids=Kid::find($id);
-        $kids;
+        $kids = Kid::find($id);
+        return $kids;
         //return view('niños.show');
     }
     

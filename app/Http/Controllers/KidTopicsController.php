@@ -32,7 +32,7 @@ class KidTopicsController extends Controller
     public function show($id)
     {
         $kidTopicss=KidTopics::find($id);
-        $kidTopicss;
+        return $kidTopicss;
         //return view('niñotema.show', compact('kidTopics')); 
     }
 

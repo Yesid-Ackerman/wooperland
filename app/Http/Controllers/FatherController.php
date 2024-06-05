@@ -35,7 +35,7 @@ class FatherController extends Controller
     public function show($id)
     {
         $fathers=Father::find($id);
-        $fathers;
+        return $fathers;
         //return view('padres.show', compact('father'));
     }
 

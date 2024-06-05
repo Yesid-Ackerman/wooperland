@@ -94,8 +94,8 @@
                     <td>{{ $kid->edad }}</td>
                     <td>{{ $kid->nickname }}</td>
                     <td>
-                        <a href="{{ route('kid.show', $kid->id) }}" class="button">Mostrar</a>
-                        <form action="{{ route('niño.destroy', $kid->id) }}" method="POST">
+                        <a href="{{ route('niños.show', $kid->id) }}" class="button">Mostrar</a>
+                        <form action="{{ route('niños.destroy', $kid->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit">Eliminar</button>
