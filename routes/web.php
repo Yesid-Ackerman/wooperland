@@ -9,7 +9,10 @@ use App\Http\Controllers\KidController;
 use App\Http\Controllers\FatherController;
 use App\Http\Controllers\KidTopicsController;
 use App\Http\Controllers\FatherTopicController;
-use App\Http\Controllers;
+use App\Http\Controllers\ParentalControlController;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\AchievementController;
+use App\Http\Controllers\LevelController;
 
 use Illuminate\Support\Facades\Route;
 
