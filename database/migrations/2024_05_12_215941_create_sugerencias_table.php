@@ -16,6 +16,8 @@ return new class extends Migration
             $table->text('Tema_sugerencia');
             $table->text('Actividad_sugerencia');
             $table->text('Caracteristica_sugerencia');
+            // $table->unsignedBigInteger('id')->nullable();
+            // $table->foreign('id')->references('id')->on('reports')->onDelete('cascade');
             $table->timestamps();
         });
     }

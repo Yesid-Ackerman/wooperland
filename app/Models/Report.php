@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Report extends Model
 {
     use HasFactory;
+    public function sugerencia(){
+ return $this->hasOne('App\Models\Sugerencias');
+    }
 }

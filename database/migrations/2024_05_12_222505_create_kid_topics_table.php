@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('kid_topics', function (Blueprint $table) {
             $table->id();
             $table->integer('fk_id_niño');
-            $table->integer('fk_id_tema');
+            $table->integer('fk_id_tema'); 
             $table->timestamps();
         });
     }

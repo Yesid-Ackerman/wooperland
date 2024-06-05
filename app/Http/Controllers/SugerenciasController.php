@@ -31,6 +31,6 @@ class SugerenciasController extends Controller
 
     public function destroysuggestion(Sugerencias $suggestions){
       $suggestions->delete();
-      return redirect()->route('list.suggestion');
+      return redirect()->route('list.suggestion');  
     }
 }

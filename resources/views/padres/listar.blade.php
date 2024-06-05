@@ -84,6 +84,7 @@
                 <th>Apellido</th>
                 <th>Edad</th>
                 <th>Gmail</th>
+                <th>Tiempo </th>
                 <th>Acciones</th>
             </tr>
         </thead>

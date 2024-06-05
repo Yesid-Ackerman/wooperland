@@ -47,4 +47,6 @@ class FatherController extends Controller
         //$father->delete();
         //return redirect()->route('padres.index');
     }
+
+
 }

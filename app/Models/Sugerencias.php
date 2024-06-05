@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Sugerencias extends Model
 {
     use HasFactory;
+
+    public function report(){
+        return $this->belongsTo('App\Models/Report');
+    }
 }

@@ -17,6 +17,8 @@ return new class extends Migration
             $table->text ('Descripcion_Reto');
             $table->text ('Actividad_Reto');
             $table->text ('Premio_Reto');
+            $table->unsignedBigInteger('kid_id')->nullable();
+            $table->foreign('kid_id')->references('id')->on('kids')->onDelete('cascade');
             $table->timestamps();
         });
     }
