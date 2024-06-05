@@ -9,6 +9,7 @@ use App\Http\Controllers\KidController;
 use App\Http\Controllers\FatherController;
 use App\Http\Controllers\KidTopicsController;
 use App\Http\Controllers\FatherTopicController;
+use App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
 
@@ -108,3 +109,30 @@ Route::get('niñotema/create', [kidTopicsController::class, 'create']);
 Route::post('niñotema/store', [kidTopicsController::class, 'store'])->name('niñotema.store');
 Route::get('niñotema/{niñotema}', [kidTopicsController::class, 'show'])->name('niñotema.show');
 Route::delete('niñotema/{niñotema}', [kidTopicsController::class, 'destroy'])->name('niñotema.destroy');
+
+// Controles Parentales
+Route::get('controles_parentales/listar', [ParentalControlController::class, 'index'])->name('parental_control.index');
+Route::get('controles_parentales/control_parental', [ParentalControlController::class, 'create']);
+Route::post('controles_parentales/store', [ParentalControlController::class, 'store'])->name('parental.store');
+Route::get('controles_parentales/{parentales}', [ParentalControlController::class, 'show'])->name('control_parental.show');
+Route::delete('controles_parentales/{parentales}', [ParentalControlController::class, 'destroy'])->name('control_parental.destroy');
+
+//informes
+Route::get('informes/listar', [ReportController::class, 'index'])->name('report.index');
+Route::get('informes/report', [ReportController::class, 'create']);
+Route::post('informes/store', [ReportController::class, 'store'])->name('report.store');
+Route::get('informes/{report}', [ReportController::class, 'show'])->name('informe.show');
+Route::delete('informes/{report}', [ReportController::class, 'destroy'])->name('informe.destroy');
+
+//premios
+Route::get('logros/listar', [AchievementController::class, 'index'])->name('achievement.index');
+Route::get('logros/achievement', [AchievementController::class, 'create']);
+Route::post('logros/store', [AchievementController::class, 'store'])->name('achievement.store');
+Route::get('logros/{achievement}', [AchievementController::class, 'show'])->name('logro.show');
+Route::delete('logros/{achievement}', [AchievementController::class, 'destroy'])->name('logro.destroy');
+//niveles
+Route::get('niveles/listar', [LevelController::class, 'index'])->name('level.index');
+Route::get('niveles/levels', [LevelController::class, 'create']);
+Route::post('niveles/store', [LevelController::class, 'store'])->name('level.store');
+Route::get('niveles/{achievement}', [LevelController::class, 'show'])->name('nivel.show');
+Route::delete('nivles/{achievement}', [LevelController::class, 'destroy'])->name('nivel.destroy');
