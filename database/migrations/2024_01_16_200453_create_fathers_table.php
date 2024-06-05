@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('exchanges', function (Blueprint $table) {
+        Schema::create('fathers', function (Blueprint $table) {
             $table->id();
-            $table->string("desc_can");
-            $table->string("ava_avatar");
-            $table->string("art_article");
+            $table->string('nombre_padre');
+            $table->string('apellido_padre');
+            $table->integer('edad_padre');
+            $table->string('gmail_padre');
+            $table->integer('tiempo_uso');
             $table->timestamps();
         });
     }
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('exchanges');
+        Schema::dropIfExists('fathers');
     }
 };

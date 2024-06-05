@@ -21,6 +21,7 @@ class KidController extends Controller
         $kid->apellido=$request->apellido;
         $kid->edad=$request->edad;
         $kid->nickname=$request->nickname;
+        $kid->avatar=$request->avatar;
         $kid->save();
 
         return $kid;

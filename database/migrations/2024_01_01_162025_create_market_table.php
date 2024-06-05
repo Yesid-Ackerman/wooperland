@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('fathers', function (Blueprint $table) {
+        Schema::create('market', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_padre');
-            $table->string('apellido_padre');
-            $table->integer('edad_padre');
-            $table->string('gmail_padre');
             $table->timestamps();
         });
     }
@@ -26,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('fathers');
+        Schema::dropIfExists('market');
     }
 };

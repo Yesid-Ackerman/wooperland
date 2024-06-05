@@ -93,6 +93,7 @@
                     <td>{{ $kid->apellido }}</td>
                     <td>{{ $kid->edad }}</td>
                     <td>{{ $kid->nickname }}</td>
+                    <td>{{ $kid->avatar }}</td>
                     <td>
                         <a href="{{ route('niños.show', $kid->id) }}" class="button">Mostrar</a>
                         <form action="{{ route('niños.destroy', $kid->id) }}" method="POST">

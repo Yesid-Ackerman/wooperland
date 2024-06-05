@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kid;
 use App\Models\KidTopics;
+use App\Models\Temas;
 use Illuminate\Http\Request;
 
 class KidTopicsController extends Controller
@@ -44,5 +46,21 @@ class KidTopicsController extends Controller
         return redirect()->route('niñotema.index');
         //$kidTopics->delete();
         //return redirect()->route('niñotema.index');
+    }
+
+    public function asociar(){
+
+        $kids = kid::all();
+        $temas = Temas::all();
+       
+        return view('niñotema.asociar',compact('kids','temas'));
+
+    }
+
+    public function kidtopicstore(Request $request){
+
+        $kid=kid::find($request->kid_id);
+        $kid->roles()->attach($request->tema_id);
+
     }
 }

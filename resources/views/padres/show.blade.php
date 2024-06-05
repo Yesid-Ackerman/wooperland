@@ -30,5 +30,6 @@
     <p>Apellido: {{ $father->apellido_padre }}</p>
     <p>Edad: {{ $father->edad_padre }}</p>
     <p>Gmail: {{ $father->gmail_padre }}</p>
+    <p>tiempo de uso: {{ $father->tiempo_uso }}</p>
 </body>
 </html>

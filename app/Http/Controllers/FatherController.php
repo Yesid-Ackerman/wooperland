@@ -20,6 +20,7 @@ class FatherController extends Controller
         $father->apellido_padre=$request->apellido_padre;
         $father->edad_padre=$request->edad_padre;
         $father->gmail_padre=$request->gmail_padre;
+        $father->tiempo_uso=$request->tiempo_uso;
         $father->save();
 
         return $father;

@@ -87,6 +87,12 @@
         <input type="text" name="gmail_padre">
     </label>
     <br>
+    <label>
+        Tiempo de uso:
+        <br>
+        <input type="number" name="Tiempo_uso">
+    </label>
+    <br>
     <button type="submit">Guardar</button>
 </form>
 

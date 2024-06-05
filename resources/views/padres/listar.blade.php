@@ -95,6 +95,7 @@
                     <td>{{ $father->apellido_padre }}</td>
                     <td>{{ $father->edad_padre }}</td>
                     <td>{{ $father->gmail_padre }}</td>
+                    <td>{{ $father->tiempo_uso }}</td>
                     <td>
                         <a href="{{ route('padres.show', $father->id) }}" class="button">Mostrar</a>
                         <form action="{{ route('padres.destroy', $father->id) }}" method="POST">

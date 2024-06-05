@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Temas extends Model
 {
     use HasFactory;
+
+    public function kids(){
+        return $this->belongsToMany('App\Models\Kid'); 
+    }
 }

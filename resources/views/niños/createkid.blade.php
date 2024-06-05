@@ -76,6 +76,12 @@
         <input type="text" name="nickname">
     </label>
     <br>
+    <label>
+        avatar:
+        <br>
+        <input type="text" name="avatar">
+    </label>
+    <br>
     <button type="submit">Guardar</button>
 </form>
 
